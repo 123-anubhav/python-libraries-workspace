@@ -1,0 +1,22 @@
+set environment in python
+=========================
+$ python -m venc .venv
+
+
+Activate Script
+------------------
+
+.\.venv\Scripts\activate
+
+
+install library
+---------------
+
+pip install -r .\requirements.txt\
+
+
+-------------------------------------
+run a project rest api file command
+-------------------------------------
+
+python -m uvicorn main:app --reload
