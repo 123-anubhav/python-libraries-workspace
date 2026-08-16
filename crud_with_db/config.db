@@ -1,0 +1,6 @@
+[database]
+host = localhost
+user = root
+password = system
+database = crud_python
+port = 3306
