@@ -6,29 +6,34 @@ python demo examples with
 
 # To Set Environment and Run the Proejcts Steps
 
-# $ python -m venv .venv  # to set virtual environment of proejct specific
+# to set virtual environment of proejct specific
+# $ python -m venv .venv  
 
-# $ .venv\Scripts\Activate # for activate virtual environment
+ # for activate virtual environment
+# $ .venv\Scripts\Activate
 
-# $ deactivate # for de-Activate virtual environment
+# for de-Activate virtual environment
+# $ deactivate 
 
-# after that install plugin that proejcts requires mentions at file `requirements.txt`
+ after that install plugin that proejcts requires mentions at file `requirements.txt`
 # $ pip install -r `requirements.txt`
 
-# uvicorn proejct file: variable name of where fastapi() define --reload
+ uvicorn proejct file: variable name of where fastapi() define --reload
 # example uvicorn main:app --reload
 
-# Note : inside fast api pydantic avaiable and bydefault python has sqlite, json
+# Note : 
+# inside fast api pydantic avaiable and bydefault python has sqlite, json
 
-# requests is use to develop consumer application just like to call http requests.
+ requests is use to develop consumer application just like to call http requests.
 
-# json with file and without file concept 
+ json with file and without file concept 
 
-# json with file has uses method dump() to wrtie data inside file and load() to read data from file
+ json with file has uses method dump() to wrtie data inside file and load() to read data from file
 
-# json without file has uses method dumps() to wrtie data and loads() to read data
+ json without file has uses method dumps() to wrtie data and loads() to read data
 
-# Note For JSON is if data getting from `pydantic` then we need to use model_dump() to parse data into json then we can write inside file using dump(parse data)
+# Note For JSON is :
+  if data getting from `pydantic` then we need to use model_dump() to parse data into json then we can write inside file using dump(parse data)
 
 # Fast API  uses `uvicorn` server to run rest api's and fast api has internally `pydantic` to data validate and requested.
 
