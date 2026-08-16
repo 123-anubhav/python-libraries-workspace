@@ -1,12 +1,8 @@
 # python-libraries-workspace
 python demo examples with 
-# fast api, 
-# requests , 
-# json, 
-# streamlit ui,
-# rest apis with mysql db connect and crud
-
-# ************************************************** 
+# fast api, # requests , # json, # streamlit ui, # rest apis with mysql db connect and crud
+---
+---
 
 # To Set Environment and Run the Proejcts Steps
 
@@ -23,9 +19,13 @@ python demo examples with
 # example uvicorn main:app --reload
 
 # Note : inside fast api pydantic avaiable and bydefault python has sqlite, json
+
 # requests is use to develop consumer application just like to call http requests.
+
 # json with file and without file concept 
+
 # json with file has uses method dump() to wrtie data inside file and load() to read data from file
+
 # json without file has uses method dumps() to wrtie data and loads() to read data
 
 # Note For JSON is if data getting from `pydantic` then we need to use model_dump() to parse data into json then we can write inside file using dump(parse data)
@@ -37,8 +37,7 @@ python demo examples with
 # requirements.txt use for to define project requirements plugin 
 # example like
 ```
----
 fastapi
 uvicorn
 pydantic
----
+```
