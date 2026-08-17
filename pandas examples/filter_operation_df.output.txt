@@ -1,0 +1,174 @@
+"D:\workspace\FastAPIProject\pandas examples\.venv\Scripts\python.exe" "D:\workspace\FastAPIProject\pandas examples\filter_operation_df.py"
+0    101
+1    102
+2    103
+3    104
+4    105
+5    106
+Name: EmpId, dtype: int64
+0     Ravi
+1     Sita
+2    Kiran
+3    Rahul
+4    Priya
+5     Anil
+Name: Name, dtype: str
+0       IT
+1       HR
+2       IT
+3    Sales
+4       HR
+5       IT
+Name: Department, dtype: str
+0    50000
+1    45000
+2    70000
+3    40000
+4    48000
+5    65000
+Name: Salary, dtype: int64
+===============     SORTING FIELD `NAME`   ==========================
+desc sort by name field data 1     Sita
+0     Ravi
+3    Rahul
+4    Priya
+2    Kiran
+5     Anil
+Name: Name, dtype: str
+Asc sort by name field data 5     Anil
+2    Kiran
+4    Priya
+3    Rahul
+0     Ravi
+1     Sita
+Name: Name, dtype: str
+===============     SORTING Using 2 FIELD `Department` and  `Salary`  DESc: Salary and Asc: Department  ==========================
+   EmpId   Name Department  Salary  Experience
+4    105  Priya         HR   48000           4
+1    102   Sita         HR   45000           5
+2    103  Kiran         IT   70000           8
+5    106   Anil         IT   65000           7
+0    101   Ravi         IT   50000           2
+3    104  Rahul      Sales   40000           1
+===============     SORTING Using 2 FIELD `Department` and  `Salary`  Asc: Salary and Asc: Department  ==========================
+   EmpId   Name Department  Salary  Experience
+1    102   Sita         HR   45000           5
+4    105  Priya         HR   48000           4
+0    101   Ravi         IT   50000           2
+5    106   Anil         IT   65000           7
+2    103  Kiran         IT   70000           8
+3    104  Rahul      Sales   40000           1
+   EmpId   Name Department  Salary  Experience
+5    106   Anil         IT   65000           7
+2    103  Kiran         IT   70000           8
+5    106
+2    103
+Name: EmpId, dtype: int64
+5     Anil
+2    Kiran
+Name: Name, dtype: str
+5    IT
+2    IT
+Name: Department, dtype: str
+================  original df is ===========
+   EmpId   Name Department  Salary  Experience
+1    102   Sita         HR   45000           5
+4    105  Priya         HR   48000           4
+0    101   Ravi         IT   50000           2
+5    106   Anil         IT   65000           7
+2    103  Kiran         IT   70000           8
+3    104  Rahul      Sales   40000           1
+=================== Salary and departemnt wise filter data using dataframe ===============
+
+   EmpId   Name Department  Salary  Experience
+0    101   Ravi         IT   50000           2
+5    106   Anil         IT   65000           7
+2    103  Kiran         IT   70000           8
+ ======   Added One field `BONUS`  ==============
+
+   EmpId   Name Department  Salary  Experience    Bonus
+1    102   Sita         HR   45000           5   6750.0
+4    105  Priya         HR   48000           4   7200.0
+0    101   Ravi         IT   50000           2   7500.0
+5    106   Anil         IT   65000           7   9750.0
+2    103  Kiran         IT   70000           8  10500.0
+3    104  Rahul      Sales   40000           1   6000.0
+ ======   Added One MoRe field `Total_Salary`  ==============
+
+   EmpId   Name Department  Salary  Experience    Bonus  Total_Salary
+1    102   Sita         HR   45000           5   6750.0       51750.0
+4    105  Priya         HR   48000           4   7200.0       55200.0
+0    101   Ravi         IT   50000           2   7500.0       57500.0
+5    106   Anil         IT   65000           7   9750.0       74750.0
+2    103  Kiran         IT   70000           8  10500.0       80500.0
+3    104  Rahul      Sales   40000           1   6000.0       46000.0
+===========  after perform updates on bonus in salary drop column ===========
+
+   EmpId   Name Department  Salary  Experience  Total_Salary
+1    102   Sita         HR   45000           5       51750.0
+4    105  Priya         HR   48000           4       55200.0
+0    101   Ravi         IT   50000           2       57500.0
+5    106   Anil         IT   65000           7       74750.0
+2    103  Kiran         IT   70000           8       80500.0
+3    104  Rahul      Sales   40000           1       46000.0
+EmpId           6
+Name            6
+Department      3
+Salary          6
+Experience      6
+Total_Salary    6
+dtype: int64
+ =================  Grouping In DataFrame  =======================
+Department
+HR       48000
+IT       70000
+Sales    40000
+Name: Salary, dtype: int64
+----------------------------------------------------
+Department
+HR       45000
+IT       50000
+Sales    40000
+Name: Salary, dtype: int64
+----------------------------------------------------
+Department
+HR       46500.000000
+IT       61666.666667
+Sales    40000.000000
+Name: Salary, dtype: float64
+----------------------------------------------------
+Department
+HR        2121.320344
+IT       10408.329997
+Sales             NaN
+Name: Salary, dtype: float64
+----------------------------------------------------
+<StringArray>
+['HR', 'IT', 'Sales']
+Length: 3, dtype: str
+----------------------------------------------------
+            count          mean           std  ...      50%      75%      max
+Department                                     ...
+HR            2.0  46500.000000   2121.320344  ...  46500.0  47250.0  48000.0
+IT            3.0  61666.666667  10408.329997  ...  65000.0  67500.0  70000.0
+Sales         1.0  40000.000000           NaN  ...  40000.0  40000.0  40000.0
+
+[3 rows x 8 columns]
+-------------------isnull and isnull().sum()----------------------------
+    Name  Salary
+0  False   False
+1  False    True
+2  False   False
+3  False    True
+-------------------isnull().sum()---------------------------
+Name      0
+Salary    2
+dtype: int64
+-------------------fillna()---------------------------
+    Name   Salary
+0   Ravi  50000.0
+1   Sita      0.0
+2  Kiran  65000.0
+3  Rahul      0.0
+
+Process finished with exit code 0
